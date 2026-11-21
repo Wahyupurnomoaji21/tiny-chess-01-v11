@@ -21,3 +21,10 @@ the 4,096-byte cap; history + MVV-LVA + TT-move ordering remain.
 ## Practice trials (kit, 3 trials x 6 games, 90k nodes)
 
 See `~/workspace/makefun/tiny-chess-01-dev/trials-v11/`.
+
+- Trial 0 (pre-fix): Elo **876** (1W/0D/5L) — root `cs`-init bug: the
+  engine played its depth-1 best move on every move.
+- Trial 0 (after fix): Elo **1545** (3W/3D/0L, spare_plies 329) — wins
+  vs depth-2, depth-3, nodes-100k; draws vs depth-4, nodes-250k,
+  nodes-500k (all threefold repetition). Target was >= 1654: not met.
+  No further iteration (one-iteration limit used); NOT submitted.
